@@ -1,3 +1,4 @@
+@use '../settings/settings.core' as settingsCore;
 /* ==========================================================================
    #RESPONSIVE-SPACINGS
    ========================================================================== */
@@ -62,8 +63,6 @@ $inuit-spacing-directions: null !default;
 
 @else {
 
-
-
   // When using Sass-MQ, this defines the separator for the breakpoints suffix
   // in the class name. By default, we are generating the responsive suffixes
   // for the classes with a `@` symbol so you get classes like:
@@ -74,7 +73,6 @@ $inuit-spacing-directions: null !default;
   // escaped with a `\`. In the markup though, you write your classes without the
   // backslash (e.g. `u-margin-bottom@mobile`).
 
-  @use "../settings/settings.core" as settingsCore;
   $inuit-widths-breakpoint-separator: \@ !default;
 
 
