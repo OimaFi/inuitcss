@@ -15,6 +15,9 @@
  *   .u-padding-vertical-small {}
  */
 
+
+@use "../settings/settings.core" as settingsCore;
+
 $inuit-spacing-directions: (
   null: null,
   "-top": "-top",
@@ -23,21 +26,20 @@ $inuit-spacing-directions: (
   "-left": "-left",
   "-horizontal": "-left" "-right",
   "-vertical": "-top" "-bottom",
-) !default;
+  ) !default;
 
 $inuit-spacing-properties: (
   "padding": "padding",
   "margin": "margin",
-) !default;
+  ) !default;
 
 $inuit-spacing-sizes: (
-  null: $inuit-global-spacing-unit,
-  "-tiny": $inuit-global-spacing-unit-tiny,
-  "-small": $inuit-global-spacing-unit-small,
-  "-large": $inuit-global-spacing-unit-large,
-  "-huge": $inuit-global-spacing-unit-huge,
-  "-none": 0
-) !default;
+  null: settingsCore.$inuit-global-spacing-unit,
+  "-tiny": settingsCore.$inuit-global-spacing-unit-tiny,
+  "-small": settingsCore.$inuit-global-spacing-unit-small,
+  "-large": settingsCore.$inuit-global-spacing-unit-large,
+  "-huge": settingsCore.$inuit-global-spacing-unit-huge,
+  "-none": 0) !default;
 
 @each $property-namespace, $property in $inuit-spacing-properties {
 

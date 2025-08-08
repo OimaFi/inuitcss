@@ -6,9 +6,8 @@
  * To run Ruby Sass Tests, we need to import all the test spec files here
  */
 
-@import "true";
+@use "true";
+@use "./_tools.font-size.scss" as toolsFontSizeTest;
+@use "./_utilities.widths.scss" as utilitiesWidthsTest;
 
-@import "_tools.font-size.scss";
-@import "_utilities.widths.scss";
-
-@include report();
+@include true.report();

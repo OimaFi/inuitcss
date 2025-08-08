@@ -1,6 +1,8 @@
-@import "true";
-@import "../settings/settings.core";
-@import "../tools/tools.font-size";
+@use 'sass:meta';
+@use 'sass:math';
+@use '../settings/settings.core' as settingsCore;
+@use '../tools/tools.font-size' as *;
+@use 'true' as *;
 
 
 
@@ -9,6 +11,7 @@
   @include test("it should output a font-size and line-height based on a given input") {
 
     @include assert() {
+
 
       @include output {
         @include inuit-font-size(16px);
@@ -26,6 +29,7 @@
 
     @include assert() {
 
+
       @include output {
         @include inuit-font-size(18px, 2);
       }
@@ -41,6 +45,7 @@
   @include test("it should output a font-size as important when passing true") {
 
     @include assert() {
+
 
       @include output {
         @include inuit-font-size(21px, $important: true);
@@ -58,6 +63,7 @@
 
     @include assert() {
 
+
       @include output {
         @include inuit-font-size(24px, $modifier: +2);
       }
@@ -74,6 +80,7 @@
 
     @include assert() {
 
+
       @include output {
         @include inuit-font-size(32px, $modifier: -1);
       }
@@ -86,4 +93,3 @@
     }
   }
 }
-

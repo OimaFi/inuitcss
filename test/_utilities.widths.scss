@@ -1,5 +1,5 @@
-@import "true";
-@import "../utilities/utilities.widths";
+@use "../utilities/utilities.widths" as utilitiesWidths;
+@use "true" as *;
 
 
 
@@ -9,17 +9,35 @@
 
     @include assert() {
 
+
       @include output {
-        @include inuit-widths(1 2 3);
+        @include utilitiesWidths.inuit-widths(1 2 3);
       }
 
       @include expect {
-        .u-1\/1 { width: 100% !important; }
-        .u-1\/2 { width: 50% !important; }
-        .u-2\/2 { width: 100% !important; }
-        .u-1\/3 { width: 33.3333333333% !important; }
-        .u-2\/3 { width: 66.6666666667% !important; }
-        .u-3\/3 { width: 100% !important; }
+        .u-1\/1 {
+          width: 100% !important;
+        }
+
+        .u-1\/2 {
+          width: 50% !important;
+        }
+
+        .u-2\/2 {
+          width: 100% !important;
+        }
+
+        .u-1\/3 {
+          width: 33.3333333333% !important;
+        }
+
+        .u-2\/3 {
+          width: 66.6666666667% !important;
+        }
+
+        .u-3\/3 {
+          width: 100% !important;
+        }
       }
     }
   }

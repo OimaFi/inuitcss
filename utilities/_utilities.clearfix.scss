@@ -1,11 +1,5 @@
-/* ==========================================================================
-   #CLEARFIX
-   ========================================================================== */
-
-/**
- * Attach our clearfix mixin to a utility class.
- */
+@use "../tools/tools.clearfix" as toolsClearfix;
 
 .u-clearfix {
-  @include inuit-clearfix();
+  @include toolsClearfix.inuit-clearfix();
 }

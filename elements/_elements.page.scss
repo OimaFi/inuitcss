@@ -15,10 +15,19 @@
  */
 
 @use "sass:math";
+@use "../settings/settings.core" as settingsCore;
 
 html {
-  font-size: math.div($inuit-global-font-size, 16px) * 1em; /* [1] */
-  line-height: math.div($inuit-global-line-height, $inuit-global-font-size); /* [1] */
-  overflow-y: scroll; /* [2] */
-  min-height: 100%; /* [3] */
+  font-size: math.div(settingsCore.$inuit-global-font-size, 16px) * 1em;
+
+  /* [1] */
+  line-height: math.div(settingsCore.$inuit-global-line-height, settingsCore.$inuit-global-font-size);
+
+  /* [1] */
+  overflow-y: scroll;
+
+  /* [2] */
+  min-height: 100%;
+
+  /* [3] */
 }

@@ -75,39 +75,39 @@
  */
 
 // SETTINGS
-@import "settings/example.settings.config";
-@import "settings/settings.core";
-@import "settings/example.settings.global";
+@use "settings/example.settings.config" as *;
+@use "settings/settings.core" as *;
+@use "settings/example.settings.global" as *;
 
 
 
 
 
 // TOOLS
-@import "tools/tools.font-size";
-@import "tools/tools.clearfix";
-@import "tools/tools.hidden";
-@import "node_modules/sass-mq/mq";
+@use "tools/tools.font-size" as toolsFontSize;
+@use "tools/tools.clearfix" as toolsClearfix;
+@use "tools/tools.hidden" as toolsHidden;
+@use "sass-mq/mq" as mq;
 
 
 
 
 
 // GENERIC
-@import "generic/generic.box-sizing";
-@import "generic/generic.normalize";
-@import "generic/generic.reset";
-@import "generic/generic.shared";
+@use "generic/generic.box-sizing" as *;
+@use "generic/generic.normalize" as *;
+@use "generic/generic.reset" as *;
+@use "generic/generic.shared" as *;
 
 
 
 
 
 // ELEMENTS
-@import "elements/elements.page";
-@import "elements/elements.headings";
-@import "elements/elements.images";
-@import "elements/elements.tables";
+@use "elements/elements.page" as *;
+@use "elements/elements.headings" as *;
+@use "elements/elements.images" as *;
+@use "elements/elements.tables" as *;
 
 
 
@@ -116,18 +116,18 @@
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
-@import "objects/objects.wrapper";
-@import "objects/objects.layout";
-@import "objects/objects.media";
-@import "objects/objects.flag";
-@import "objects/objects.list-bare";
-@import "objects/objects.list-inline";
-@import "objects/objects.box";
-@import "objects/objects.block";
-@import "objects/objects.ratio";
-@import "objects/objects.crop";
-@import "objects/objects.table";
-@import "objects/objects.pack";
+@use "objects/objects.wrapper" as *;
+@use "objects/objects.layout" as *;
+@use "objects/objects.media" as *;
+@use "objects/objects.flag" as *;
+@use "objects/objects.list-bare" as *;
+@use "objects/objects.list-inline" as *;
+@use "objects/objects.box" as *;
+@use "objects/objects.block" as *;
+@use "objects/objects.ratio" as *;
+@use "objects/objects.crop" as *;
+@use "objects/objects.table" as *;
+@use "objects/objects.pack" as *;
 
 
 
@@ -136,22 +136,22 @@
 // COMPONENTS
 //
 // Build and include your project’s UI components here.
-@import "components/example.components.buttons";
+@use "components/example.components.buttons" as *;
 
 
 
 
 
 // UTILITIES
-@import "utilities/utilities.clearfix";
+@use "utilities/utilities.clearfix" as *;
 
 // Be aware that enabling offsets produces a large chunk of classes which might
 // bloat your CSS, depending on the amount of breakpoints you defined.
 // Only set this to `true` if you are absolutely sure about what you are doing.
 $inuit-offsets: true;
-@import "utilities/utilities.widths";
-@import "utilities/utilities.headings";
-@import "utilities/utilities.spacings";
-@import "utilities/utilities.responsive-spacings";
-@import "utilities/utilities.print";
-@import "utilities/utilities.hide";
+@use "utilities/utilities.widths" as *;
+@use "utilities/utilities.headings" as *;
+@use "utilities/utilities.spacings" as *;
+@use "utilities/utilities.responsive-spacings" as *;
+@use "utilities/utilities.print" as *;
+@use "utilities/utilities.hide" as *;
