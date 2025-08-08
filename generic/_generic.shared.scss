@@ -1,3 +1,5 @@
+@use "../settings/settings.core" as settingsCore;
+
 /* ==========================================================================
    #SHARED
    ========================================================================== */
@@ -31,8 +33,6 @@ fieldset {
   margin-bottom: settingsCore.$inuit-global-spacing-unit;
 }
 
-
-
 /**
  * Consistent indentation for lists.
  */
@@ -41,5 +41,4 @@ dd,
 ol,
 ul {
   margin-left: settingsCore.$inuit-global-spacing-unit;
-  @use "../settings/settings.core" as settingsCore;
 }

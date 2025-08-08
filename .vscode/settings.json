@@ -1,0 +1,6 @@
+{
+  // Ensure a single trailing newline at EOF
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.eol": "\n"
+}
